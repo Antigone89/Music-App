@@ -14,10 +14,10 @@ function App() {
     <div className="App">
         <header className="App-header">
           < FetchApi />
-          < MusicList/>
+   {/*       < MusicList/>
           < Searchbar />
           < Navigationbar/>
-          < Blog />
+          < Blog /> */}
   
       </header>
       </div>

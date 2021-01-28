@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 
-const FetchApi = () => 
+const FetchApi = () => {
 
     const [blogs, setBlogs] = useState(null);
 
     useEffect(() => {
-        fetch('https://api.discogs.com/artists/1?callback=callbackname')
+        fetch('https://api.discogs.com//database/search?q=rihana&key=bsJCAGTsbOBTVFHLLILq&secret=fWchXQtBWETnYKeYagJLnBTqmWaaUokV')
             .then(res => {
                 return res.json();
             })
@@ -19,7 +19,7 @@ const FetchApi = () =>
 
     return (
         <div>
-            
+            <h1>api</h1>
         </div>
     )
 }
