@@ -9,6 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
            <h1>Hello React, lets create a music App</h1>
+          <h2>Hi here i start to code</h2>
         </p>
        
         <a
