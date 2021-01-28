@@ -1,27 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import './App.css';
+import FetchApi from './Components/FetchApi'
+import MusicList from './Components/MusicList';
+import React, { Component } from 'react';
+import Searchbar from './Components/Searchbar';
+import Navigationbar from './Components/Navigationbar';
+import Blog from './Components/Blog';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-           <h1>Hello React, lets create a music App</h1>
-          <h2>Hi here i start to code</h2>
-        </p>
-       
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <header className="App-header">
+          < FetchApi />
+          < MusicList/>
+          < Searchbar />
+          < Navigationbar/>
+          < Blog />
+  
       </header>
-    </div>
+      </div>
+      </BrowserRouter>
   );
 }
 
