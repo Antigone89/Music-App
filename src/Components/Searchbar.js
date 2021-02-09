@@ -1,9 +1,18 @@
 import React from 'react'
+import AlbumList from './AlbumList'
 
-const Searchbar = () => {
+const Searchbar = (props) => {
+    const album = props.album;
     return (
-        <div>
-           <h1>whatever</h1> 
+        <div className="Searchbar">
+            <input type="text" placeholder="Search..." />
+            {album.map((album, title) => {
+                return (
+                    <div className="user" key={key}>
+                        <p>{album.title}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
