@@ -10,19 +10,18 @@ import {
 function AlbumDetails(props) {
     const album = props.album;
     
-if(album)
+
     return (
         <div>
             
             <h3>{album.title}</h3>
             <h4>{album.genre}</h4>
-            
-            <p>{album.country}</p>
+        
+            <img src={album.cover_image} width="200px" height="auto"></img>
             
  
         </div>
     )
-else return (<p>no album</p>)
 }
 
 export default AlbumDetails
