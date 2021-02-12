@@ -10,7 +10,6 @@ const RegistrationScreen = ({ SetInputText }) => {
     return (
             <form>
         <div className="base-container">
-             <h1>Hello Registration</h1>
                     <div className="header">Login</div>
                     <div className="content"></div>
                   
