@@ -6,7 +6,10 @@ import Navigationbar from './Components/Navigationbar';
 import RegistrationScreen from './Components/RegistrationScreen';
 import AlbumDetails from './Components/AlbumDetails'
 import { MusicProvider } from './Components/MusicContext';
+import { AuthProvider } from './context/AuthContext';
 import Login from './Components/Login';
+
+/*
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
@@ -17,29 +20,31 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 firebase.initializeApp({
  //your config 
 })
-  
+
+
 const auth = firebase.auth();
 const firestore = firebase.firestore();
+*/
 
 function App() {
 
-  const [inputText, setInputText] = useState("");
 
   return (
    
     <BrowserRouter>
+      <AuthProvider>
       <MusicProvider>
         
     <div className="App">
         <header className="App-header"> 
             < Navigationbar />
-            <RegistrationScreen />
+     
           <Switch>
-            <Route exact path="/Searchbar" component={Searchbar}>
+            <Route exact path="/searchbar" component={Searchbar}>
             </Route>
-            <Route exact path="/Login" component={Login}>
+            <Route exact path="/login" component={Login}>
             </Route>
-            <Route exact path="/RegistrationScreen" component={RegistrationScreen} setInputText={setInputText}>
+            <Route exact path="/registration" component={RegistrationScreen} >
             </Route>  
             <Route exact path="/" component={AlbumList}>
             </Route>
@@ -47,6 +52,7 @@ function App() {
         </header>
         </div>
         </MusicProvider>
+        </AuthProvider>
       </BrowserRouter>
   );
 }

@@ -6,6 +6,9 @@ import {
   Link
 } from "react-router-dom";
 
+const item = {
+    width : "100%"
+}
 
 function AlbumDetails(props) {
     const album = props.album;
