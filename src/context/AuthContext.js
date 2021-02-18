@@ -110,6 +110,15 @@ export const AuthProvider = ({ children }) => {
 
     }
 
+    const logout = () => {
+        firebase.auth().signOut().then(() => {
+            setUser(null)
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        })
+    }
+
     return (
         <AuthContext.Provider value={{ user, login, register, addToFavorite, isAuthenticated }}>
             {children}
@@ -117,3 +126,4 @@ export const AuthProvider = ({ children }) => {
     )
 
 }
+

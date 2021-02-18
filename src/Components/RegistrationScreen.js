@@ -16,15 +16,13 @@ const RegistrationScreen = () => {
     };
     const handleRegister = (e) => {
         e.preventDefault()
-        register({email, password})
+        register({ email, password })
+
     }
    
     return (
             <form>
-        <div className="base-container">
-                    <div className="header">Registration</div>
-                    <div className="content"></div>
-                  
+    
                     <div className="form">
                 <div className="form-group">
                    
@@ -40,7 +38,7 @@ const RegistrationScreen = () => {
                        
                 </div>
                     </div>
-                </div> 
+            
                   </form >
             )
         }

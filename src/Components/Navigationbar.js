@@ -15,16 +15,24 @@ const Navigationbar = () => {
     let location = useLocation()
     console.log('location', location.pathname)
 
-   
+    console.log(user)
+    
+     const handleLogout = (e) => {
+        e.preventDefault()
+        logout({ email, password })
     
     return (
         <nav className="navbar">
         <div >
-                <Link to="/" style={location.pathname == "/" ? activeStyle : normalStyle} >Home</Link>
+            <Link to="/" style={location.pathname == "/" ? activeStyle : normalStyle} >Home</Link>
             <Link to="/registration" style={location.pathname == "/registration" ? activeStyle : normalStyle}>Registration</Link>
             <Link to="/searchbar" style={location.pathname == "/searchbar" ? activeStyle : normalStyle}>Search</Link>
-        </div>
-        {user ? <p>{user.email}</p> : <p>No user</p>}
+            <Link to="/login" style={location.pathname == "/login" ? activeStyle : normalStyle}>Login</Link>   
+            </div>
+    
+            {user ? <p>{user.email}</p> : <p>No user</p>}
+            
+            <button onClick={logout} className="btn"></button>
             </nav>
     )
 }
