@@ -16,7 +16,8 @@ const Login = () => {
     };
     const handleLogin = (e) => {
         e.preventDefault()
-        login({email, password})
+        login({ email, password })
+
     }
    
     return (

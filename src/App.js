@@ -37,7 +37,7 @@ function App() {
         
     <div className="App">
         <header className="App-header"> 
-            < Navigationbar />
+              < Navigationbar />
      
           <Switch>
             <Route exact path="/searchbar" component={Searchbar}>
